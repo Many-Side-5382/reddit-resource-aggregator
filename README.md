@@ -1,30 +1,33 @@
-# Reddit Read-Only Research Collector (Personal Use)
+# Read-only Reddit Research Collector (Personal Use)
 
 ## Purpose
-A non-commercial, read-only tool that collects public Reddit threads and comment trees to produce non-identifying, aggregated summaries (e.g., common themes, frequently recommended resources).
+Non-commercial, read-only tool to collect public Reddit posts and comment trees and produce aggregated, non-identifying summaries (e.g., common themes and frequently recommended resources).
 
-## Scope (initial)
+## Initial scope
 - Subreddits: r/CompTIA, r/WGUCyberSecurity, r/WGU
 - Time window: configurable (e.g., last 6 months)
-- Topic filtering: configurable keywords (e.g., PenTest+ PT0-003 variants)
+- Topics: configurable (e.g., PenTest+ PT0-003 and other tech/cert topics)
 
 ## What it does
 - Searches within the approved subreddits for matching topics
-- Fetches the thread content and the full comment tree (when available via the API)
-- Exports machine-readable JSONL for offline analysis
+- Fetches thread content and comment trees for offline analysis
+- Exports machine-readable outputs (e.g., JSONL)
 
 ## What it does NOT do
 - No posting, commenting, voting, messaging, or moderation actions
-- No circumvention of rate limits or access controls
-- No attempt to identify or profile users
+- No attempts to bypass rate limits or access controls
+- No re-identification or user profiling
 - No AI/ML/LLM training or fine-tuning
+- No redistribution of raw datasets
 
 ## Rate limiting & compliance
-- Uses OAuth via Reddit’s Data API
-- Uses a descriptive User-Agent
-- Throttles requests and backs off on 429s
-- Stores data locally for analysis only; no public dataset distribution
+- Uses OAuth and a descriptive User-Agent
+- Throttles requests and backs off on rate-limit responses (e.g., HTTP 429)
+- Stores data locally for analysis only; output files are not committed to this repo
 
 ## Data handling
-- Output files are not committed to this repo
-- Credentials are provided via environment variables (never committed)
+- Credentials are supplied via environment variables (never committed)
+- Output/data files are intentionally excluded via .gitignore
+
+## Notes
+This repository is intentionally minimal for review/approval. It does not contain collected datasets or credentials.
