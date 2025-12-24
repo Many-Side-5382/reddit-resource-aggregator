@@ -29,5 +29,9 @@ Non-commercial, read-only tool to collect public Reddit posts and comment trees 
 - Credentials are supplied via environment variables (never committed)
 - Output/data files are intentionally excluded via .gitignore
 
+## Scope changes & retention
+- This tool is intended for read-only, non-commercial analysis. If scope expands materially (e.g., many additional subreddits), it will be updated through the approval process before expansion.
+- Stored data is kept only as long as needed for analysis; output datasets are not published.
+
 ## Notes
 This repository is intentionally minimal for review/approval. It does not contain collected datasets or credentials.
